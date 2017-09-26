@@ -31,6 +31,18 @@ set autoread
 set laststatus=2
 "set statusline=\ %<%l:%v\ [%P]%=%a\ %h%m%r\ %F\
 set statusline=%<\ %n:%f\ %m%r%y%=%-35.(line:\ %l\ of\ %L,\ col:\ %c%V\ (%P)%)
+
+set statusline+=%#warningmsg#
+set statusline+=%{SyntasticStatuslineFlag()}
+set statusline+=%*
+
+let g:syntastic_always_populate_loc_list = 1
+let g:syntastic_auto_loc_list = 1
+let g:syntastic_check_on_open = 1
+let g:syntastic_check_on_wq = 0
+let g:syntastic_c_no_default_include_dirs=1
+let g:syntastic_cpp_no_default_include_dirs=1
+
 set ruler
 
 au BufReadPost *
