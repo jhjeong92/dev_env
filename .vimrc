@@ -45,6 +45,23 @@ let g:syntastic_cpp_no_default_include_dirs=1
 
 set ruler
 
+map <F1> :ConqueTermVSplit bash<CR>
+imap <F1> <ESC>:ConqueTermVSplit bash<CR>
+map <F2> :ConqueTermSplit bash<CR>
+imap <F2> <ESC>:ConqueTermSplit bash<CR>
+map <F3> :ConqueGdbVSplit 
+imap <F3> <ESC>:ConqueGdbVSplit 
+map <F4> :ConqueGdbSplit 
+imap <F4> :ConqueGdbSplit 
+map <F5> :NERDTree<CR>
+imap <F5> <ESC>:NERDTree<CR>
+map <F6> :NERDTreeClose<CR>
+imap <F6> <ESC>:NERDTreeClose<CR>
+map <F7> :SyntasticCheck<CR>
+imap <F7> <ESC>:SyntasticCheck<CR>
+map <F8> :SyntasticReset<CR>
+imap <F8> <ESC>:SyntasticReset<CR>
+
 au BufReadPost *
 \ if line("'\"") > 0 && line("'\"") <= line("$") |
 \ exe "norm g`\"" |
