@@ -7,6 +7,8 @@ if $TERM == "xterm-256color"
 	set t_Co=256
 endif
 
+let g:ConqueTerm_FastMode = 1
+
 let g:solarized_bold = 0
 let g:solarized_contrast = "high"
 let g:solarized_termcolors = 256
@@ -35,6 +37,8 @@ set statusline=%<\ %n:%f\ %m%r%y%=%-35.(line:\ %l\ of\ %L,\ col:\ %c%V\ (%P)%)
 set statusline+=%#warningmsg#
 set statusline+=%{SyntasticStatuslineFlag()}
 set statusline+=%*
+
+let g:ycm_confirm_extra_conf = 0
 
 let g:syntastic_always_populate_loc_list = 1
 let g:syntastic_auto_loc_list = 1
