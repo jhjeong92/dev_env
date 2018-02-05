@@ -7,7 +7,8 @@ if $TERM == "xterm-256color"
 	set t_Co=256
 endif
 
-let g:ConqueTerm_FastMode = 1
+"set background=light
+"colorscheme PaperColor
 
 let g:solarized_bold = 0
 let g:solarized_contrast = "high"
@@ -20,9 +21,10 @@ let g:solarized_termcolors = 256
 "colorscheme solarized
 colorscheme railscasts
 
-set cursorline
-hi CursorLine   cterm=NONE ctermbg=237 ctermfg=NONE guibg=darkred guifg=white
+"set cursorline
+"hi CursorLine   cterm=NONE ctermbg=237 ctermfg=NONE guibg=darkred guifg=white
 
+let g:ConqueTerm_FastMode = 1
 set ts=4
 set sw=4
 set hlsearch
@@ -38,7 +40,9 @@ set statusline+=%#warningmsg#
 set statusline+=%{SyntasticStatuslineFlag()}
 set statusline+=%*
 
+let g:loaded_youcompleteme = 1
 let g:ycm_confirm_extra_conf = 0
+let g:ycm_global_ycm_extra_conf = '~/.vim/.ycm_extra_conf.py'
 
 let g:syntastic_always_populate_loc_list = 1
 let g:syntastic_auto_loc_list = 1
@@ -65,6 +69,14 @@ map <F7> :SyntasticCheck<CR>
 imap <F7> <ESC>:SyntasticCheck<CR>
 map <F8> :SyntasticReset<CR>
 imap <F8> <ESC>:SyntasticReset<CR>
+map <F9> :resize +1<CR>
+imap <F9> <ESC>:resize +1<CR>
+map <F10> :resize -1<CR>
+imap <F10> <ESC>:resize -1<CR>
+map <F11> :vertical resize +1<CR>
+imap <F11> <ESC>:vertical resize +1<CR>
+map <F12> :vertical resize -1<CR>
+imap <F12> <ESC>:vertical resize -1<CR>
 
 au BufReadPost *
 \ if line("'\"") > 0 && line("'\"") <= line("$") |
