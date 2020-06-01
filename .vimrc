@@ -7,22 +7,10 @@ if $TERM == "xterm-256color"
 	set t_Co=256
 endif
 
-"set background=light
-"colorscheme PaperColor
-
 let g:solarized_bold = 0
 let g:solarized_contrast = "high"
 let g:solarized_termcolors = 256
-"if has('gui_running')
-"	set background=light
-"else
-"	set background=dark
-"endif
-"colorscheme solarized
 colorscheme railscasts
-
-"set cursorline
-"hi CursorLine   cterm=NONE ctermbg=237 ctermfg=NONE guibg=darkred guifg=white
 
 let g:ConqueTerm_FastMode = 1
 set ts=4
@@ -33,9 +21,9 @@ set ai
 set smartindent
 set autoread
 set laststatus=2
-"set statusline=\ %<%l:%v\ [%P]%=%a\ %h%m%r\ %F\
+set backspace=2
+set backspace=indent,eol,start
 set statusline=%<\ %n:%f\ %m%r%y%=%-35.(line:\ %l\ of\ %L,\ col:\ %c%V\ (%P)%)
-
 set statusline+=%#warningmsg#
 set statusline+=%{SyntasticStatuslineFlag()}
 set statusline+=%*
@@ -50,6 +38,8 @@ let g:syntastic_check_on_open = 1
 let g:syntastic_check_on_wq = 0
 let g:syntastic_c_no_default_include_dirs=1
 let g:syntastic_cpp_no_default_include_dirs=1
+let g:syntastic_python_checkers=['flake8']
+let g:syntastic_python_flake8_post_args='--ignore=E501'
 
 set ruler
 
